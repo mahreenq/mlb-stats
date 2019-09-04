@@ -1,37 +1,92 @@
 import React, { Component } from "react";
 //import Loading from "../../components/Loading";
-import axios from "axios";
+//import axios from "axios";
+
+import { connect } from "react-redux";
+import { fetchTeams } from "../../redux/modules/mlb-teams";
+
+import Teams from "./Teams";
 
 class TeamsContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { teams: [] };
-  }
-
-  componentDidMount() {
-    axios
-      .get("https://statsapi.mlb.com/api/v1/teams?sportId=1")
-      .then(res => {
-        const teams = res.data.teams;
-        this.setState({ teams });
-        console.log(this.state.teams);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+  UNSAFE_componentWillMount() {
+    this.props.dispatch(fetchTeams());
   }
 
   render() {
-    const teams = this.state.teams;
-    return (
-      <div>
+    const loading = this.props.isLoading;
+    const mlb_teams = this.props.teams;
+    console.log(mlb_teams.teams);
 
-        {teams.map(team => {
-          return (<p key={team.id}>{team.name}</p>)
-        })}
-      </div>
+    return loading === false ? (
+      <Teams mlb_teams={mlb_teams} isLoading={loading} />
+    ) : (
+      <p>LOADING </p>
     );
   }
 }
 
-export default TeamsContainer;
+const mapStateToProps = state => ({
+  isLoading: state.teams.isLoading,
+  teams: state.teams.teamsData
+  //selected : state.selected.selectedStack
+});
+
+export default connect(mapStateToProps)(TeamsContainer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//export default TeamsContainer;
+
+//   constructor(props) {
+//     super(props);
+//     this.state = { teams: [] };
+//   }
+
+//   componentDidMount() {
+//     axios
+//       .get("https://statsapi.mlb.com/api/v1/teams?sportId=1")
+//       .then(res => {
+//         const teams = res.data.teams;
+//         this.setState({ teams });
+//         console.log(this.state.teams);
+//       })
+//       .catch(error => {
+//         console.log(error);
+//       });
+//   }
+
+//   render() {
+//     const teams = this.state.teams;
+//     return (
+//       <div>
+//         {teams.map(team => {
+//           return (
+//             <div key={team.id}>
+//               <img
+//                 src={`https://www.mlbstatic.com/team-logos/${team.id}.svg`}
+//                 height="30"
+//               />
+//               <p key={team.id}>
+//                 {team.name} -- {team.id}
+//               </p>
+//               <br />
+//               <br />
+//             </div>
+//           );
+//         })}
+//       </div>
+//     );
+//   }
