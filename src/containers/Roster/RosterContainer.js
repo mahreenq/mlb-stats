@@ -2,8 +2,7 @@ import React, { Component } from "react";
 //import Loading from "../../components/Loading";
 import axios from "axios";
 
-import { connect } from "react-redux";
-import { fetchTeams } from "../../redux/modules/mlb-teams";
+
 
 import Roster from "./Roster";
 

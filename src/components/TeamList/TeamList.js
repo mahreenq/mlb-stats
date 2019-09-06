@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import Team from "../Team/Team";
 //import "./styles.css";
-//import Project from "../Project";
-//import * as selectedAction from "../../redux/modules/selected";
-// import RaisedButton from "material-ui/RaisedButton";
-// import { connect } from "react-redux";
-// import projectData from "./project-data";
+import Masonry from 'react-masonry-component';
 
 class TeamList extends Component {
   render() {
@@ -23,12 +19,14 @@ class TeamList extends Component {
     return (
       <div>
         <p>MLB TEAMS</p>
+        <Masonry className="">
 
         {mlb_teams.map(team => {
           return (
             <Team key={team.id} team={team} selectedTeamId={selectedTeamId} />
           );
         })}
+        </Masonry>
       </div>
     );
   }

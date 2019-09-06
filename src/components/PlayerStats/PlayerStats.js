@@ -1,12 +1,6 @@
 import React, { Component } from "react";
-import Team from "../Team/Team";
-import RosterSingle from "../RosterSingle/RosterSingle";
 //import "./styles.css";
-//import Project from "../Project";
-//import * as selectedAction from "../../redux/modules/selected";
-// import RaisedButton from "material-ui/RaisedButton";
-// import { connect } from "react-redux";
-// import projectData from "./project-data";
+
 
 class PlayerStats extends Component {
   render() {

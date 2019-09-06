@@ -2,9 +2,6 @@ import React, { Component } from "react";
 //import Loading from "../../components/Loading";
 import axios from "axios";
 
-import { connect } from "react-redux";
-import { fetchTeams } from "../../redux/modules/mlb-teams";
-
 import Player from "./Player";
 
 class PlayerContainer extends Component {
@@ -31,15 +28,16 @@ class PlayerContainer extends Component {
   }
 
   render() {
-    // const teamId = this.props.match.params.teamId;
-    // const teamName = this.props.location.state.teamName;
     const { isLoading, playerStats } = this.state;
 
     // console.log(this.props);
     // console.log(this.state);
-    //return <p>PLAYER STATSSS</p>;
 
-     return isLoading === false ? <Player playerStats={playerStats} isLoading={isLoading} /> : <p>LOADING </p>;
+    return isLoading === false ? (
+      <Player playerStats={playerStats} isLoading={isLoading} />
+    ) : (
+      <p>LOADING </p>
+    );
   }
 }
 
