@@ -10,10 +10,8 @@ import RosterSingle from "../RosterSingle/RosterSingle";
 
 class PlayerStats extends Component {
   render() {
-    console.log(this.props.playerStats[0]);
+   // console.log(this.props.playerStats[0]);
     const player =this.props.playerStats[0];
-    //const {this.props.playerStats} = player
-   // const { roster, teamName } = this.props;
 
     return (
       <div>
@@ -26,9 +24,6 @@ class PlayerStats extends Component {
             }.jpg`}
           />
 
-         {/* {roster.map(player => {
-          return <RosterSingle player={player} key ={player.person.id}/>;
-         })} */}
       </div>
     );
   }

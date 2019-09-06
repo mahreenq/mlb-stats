@@ -34,7 +34,7 @@ class RosterContainer extends Component {
     const { isLoading, roster } = this.state;
     
 
-    console.log(this.props, teamId);
+    //console.log(this.props, teamId);
 
     return isLoading === false ? <Roster roster={roster} teamId={teamId} teamName={teamName} isLoading={isLoading}/> : <p>LOADING </p>;
   }

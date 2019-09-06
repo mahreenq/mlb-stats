@@ -10,15 +10,15 @@ import RosterSingle from "../RosterSingle/RosterSingle";
 
 class RosterList extends Component {
   render() {
-    console.log(this.props);
-    const { roster, teamName } = this.props;
+   // console.log(this.props);
+    const { roster, teamName, teamId } = this.props;
 
     return (
       <div>
         <h1>{teamName}</h1>
 
         {roster.map(player => {
-          return <RosterSingle player={player} key ={player.person.id}/>;
+          return <RosterSingle player={player} teamId={teamId} key ={player.person.id}/>;
         })}
       </div>
     );
