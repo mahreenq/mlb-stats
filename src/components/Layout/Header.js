@@ -1,11 +1,15 @@
 import React from "react";
-//import "./styles.css";
+import "./styles.css";
+import Typography from "@material-ui/core/Typography";
 import { Link } from "react-router-dom";
 
 const Header = ({ path }) => {
   return (
     <div className="header">
-    <h1>HEADER</h1>
+      <Typography variant="h3" gutterBottom>
+        Major League Baseball
+      </Typography>
+
       <div className="nav">
         {path === "/" ? null : <Link to="/"> HOME </Link>}
       </div>
@@ -15,7 +19,9 @@ const Header = ({ path }) => {
 
 export default Header;
 
-{/* <Link to="/about">
+{
+  /* <Link to="/about">
 <div className="headerLink">ABOUT</div>
 </Link>
-<Link to="/showcase">SHOWCASE</Link> */}
+<Link to="/showcase">SHOWCASE</Link> */
+}

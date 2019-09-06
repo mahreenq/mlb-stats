@@ -1,0 +1,17 @@
+.masonry {
+    width:  80%;
+    margin: auto;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+}
+
+@media only screen  /*Desktop */
+and (min-width:1000px )
+{
+    .masonry{
+        width: 80%;
+    }
+}

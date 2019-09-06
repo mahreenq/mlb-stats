@@ -1,0 +1,18 @@
+.header {
+text-align: center;
+color: white;
+padding-top: 30px;
+}
+
+.footer {
+  height: 60px;
+}
+
+
+@media only screen /*Mobile Larger */ and (min-width: 640px) and (max-width: 900px) {
+
+}
+
+@media only screen /*Desktop */ and (min-width: 1000px) {
+
+}

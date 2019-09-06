@@ -15,7 +15,7 @@ import PlayerContainer from "./containers/Player/PlayerContainer";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter className="App">
       <Provider store={store}>
       <Layout>
         <Switch>

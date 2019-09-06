@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Team from "../Team/Team";
-//import "./styles.css";
-import Masonry from 'react-masonry-component';
+import "./styles.css";
+import Masonry from "react-masonry-component";
+import Typography from "@material-ui/core/Typography";
 
 class TeamList extends Component {
   render() {
@@ -18,14 +19,15 @@ class TeamList extends Component {
 
     return (
       <div>
-        <p>MLB TEAMS</p>
-        <Masonry className="">
-
-        {mlb_teams.map(team => {
-          return (
-            <Team key={team.id} team={team} selectedTeamId={selectedTeamId} />
-          );
-        })}
+        <Typography className="heading" variant="h4" gutterBottom>
+          Teams
+        </Typography>
+        <Masonry className="masonry">
+          {mlb_teams.map(team => {
+            return (
+              <Team key={team.id} team={team} selectedTeamId={selectedTeamId} />
+            );
+          })}
         </Masonry>
       </div>
     );
