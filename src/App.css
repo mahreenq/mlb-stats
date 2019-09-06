@@ -4,7 +4,12 @@
 }
 
 #root {
-  background: -webkit-gradient(linear,0 100%,0 0,from(#546b90),to(#00297a)) no-repeat;
+  background: -webkit-gradient(linear, 0 100%, 0 0, from(#546b90), to(#00297a))
+    no-repeat;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* .App-logo {

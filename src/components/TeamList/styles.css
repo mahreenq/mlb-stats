@@ -11,7 +11,5 @@
 @media only screen  /*Desktop */
 and (min-width:1000px )
 {
-    .masonry{
-        width: 80%;
-    }
+
 }

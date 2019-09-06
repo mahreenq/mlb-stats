@@ -1,18 +1,28 @@
 .header {
-text-align: center;
-color: white;
-padding-top: 30px;
+  text-align: center;
+  color: white;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  align-self: flex-start;
+  margin-left: 25px;
 }
 
 .footer {
   height: 60px;
 }
 
-
 @media only screen /*Mobile Larger */ and (min-width: 640px) and (max-width: 900px) {
-
 }
 
 @media only screen /*Desktop */ and (min-width: 1000px) {
-
 }
