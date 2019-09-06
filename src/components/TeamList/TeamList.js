@@ -8,11 +8,9 @@ import Team from "../Team/Team";
 // import projectData from "./project-data";
 
 class TeamList extends Component {
-    
   render() {
     //console.log(this.props);
-    const mlb_teams = this.props.mlb_teams;
-    const selectedTeamId = this.props.selectedTeamId;
+    const { mlb_teams, selectedTeamId } = this.props;
 
     mlb_teams.sort((a, b) =>
       a.division.name > b.division.name
@@ -27,7 +25,9 @@ class TeamList extends Component {
         <p>MLB TEAMS</p>
 
         {mlb_teams.map(team => {
-          return <Team key={team.id} team={team} selectedTeamId = {selectedTeamId} />;
+          return (
+            <Team key={team.id} team={team} selectedTeamId={selectedTeamId} />
+          );
         })}
       </div>
     );

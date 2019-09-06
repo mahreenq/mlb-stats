@@ -7,8 +7,8 @@ import TeamList from "../../components/TeamList/TeamList";
 const Teams = ({ mlb_teams, isLoading, selectedTeamId}) => {
     
 
-  return mlb_teams.teams ? (
-    <TeamList mlb_teams={mlb_teams.teams} isLoading={isLoading} selectedTeamId={selectedTeamId}  />
+  return mlb_teams ? (
+    <TeamList mlb_teams={mlb_teams} isLoading={isLoading} selectedTeamId={selectedTeamId}  />
   ) : (
     <p> LOADING</p>
   );

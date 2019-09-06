@@ -14,17 +14,16 @@ class TeamsContainer extends Component {
   }
 
   render() {
-    const loading = this.props.isLoading;
-    const mlb_teams = this.props.teams;
-   // const selectedTeamId = this.props.selectedTeamId;
-   // console.log(this.props);
+    const isLoading = this.props.isLoading;
+    const mlb_teams = this.props.teams.teams;
+//   const { isLoading, mlb_teams } = this.props;
 
-    return loading === false ? (
+    console.log(this.props);
+
+    return isLoading === false ? (
       <Teams
-       // getSelectedTeam = {getSelectedTeam}
         mlb_teams={mlb_teams}
-        isLoading={loading}
-       // selectedTeamId={selectedTeamId}
+        isLoading={isLoading}
       />
     ) : (
       <p>LOADING </p>
@@ -35,7 +34,7 @@ class TeamsContainer extends Component {
 const mapStateToProps = state => ({
   isLoading: state.teams.isLoading,
   teams: state.teams.teamsData,
-  //selectedTeamId: state.selectedTeamId.selectedTeamId
+  selectedTeamId: state.selectedTeamId
 });
 
 export default connect(mapStateToProps)(TeamsContainer);

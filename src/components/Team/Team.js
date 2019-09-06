@@ -1,20 +1,30 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import * as selectedTeam from "../../redux/modules/selected-team";
 
 class Team extends Component {
   render() {
-    console.log(this.props);
+    //console.log(this.props);
     const team = this.props.team;
     return (
-      <div onClick={() => this.props.getSelectedTeam(team.id)}>
-        <img
-          alt="Team Logo"
-          height="30"
-          src={`https://www.mlbstatic.com/team-logos/${team.id}.svg`}
-        />
-        {team.name} -- {team.division.name}
-      </div>
+      <Link
+        to={{
+          pathname: `/${team.id}`,
+          state: {
+            teamName: team.name
+          }
+        }}
+      >
+        <div onClick={() => this.props.getSelectedTeam(team.id)}>
+          <img
+            alt="Team Logo"
+            height="30"
+            src={`https://www.mlbstatic.com/team-logos/${team.id}.svg`}
+          />
+          {team.name} -- {team.division.name}
+        </div>
+      </Link>
     );
   }
 }
