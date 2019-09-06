@@ -18,7 +18,6 @@ class TeamsContainer extends Component {
     const mlb_teams = this.props.teams.teams;
 //   const { isLoading, mlb_teams } = this.props;
 
-    console.log(this.props);
 
     return isLoading === false ? (
       <Teams

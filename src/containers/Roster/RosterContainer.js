@@ -17,7 +17,7 @@ class RosterContainer extends Component {
     const teamId = this.props.match.params.teamId;
     this.setState({ isLoading: true });
     axios
-      .get(`https://statsapi.mlb.com//api/v1/teams/${teamId}/roster`)
+      .get(`https://statsapi.mlb.com/api/v1/teams/${teamId}/roster`)
 
       .then(res => {
         const roster = res.data.roster;

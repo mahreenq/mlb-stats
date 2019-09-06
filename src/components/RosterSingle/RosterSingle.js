@@ -5,16 +5,17 @@ import * as selectedTeam from "../../redux/modules/selected-team";
 
 class RosterSingle extends Component {
   render() {
-    console.log(this.props.player.person);
+    //console.log(this.props.player.person);
     const player = this.props.player.person;
     return (
       <Link
-      // to={{
-      //   pathname: `/${team.id}`,
-      //   state: {
-      //     teamName: team.name
-      //   }
-      // }}
+      to={{
+        pathname: `/:teamId/${player.id}`, 
+        state: {
+          playerName: player.fullName,
+          playerId : player.id
+        }
+      }}
       >
         {/* <div onClick={() => this.props.getSelectedTeam(team.id)}>
           <img
