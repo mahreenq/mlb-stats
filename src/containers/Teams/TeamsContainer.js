@@ -4,6 +4,7 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 import { fetchTeams } from "../../redux/modules/mlb-teams";
+//import {getSelectedTeam} from "../../redux/modules/selected-team";
 
 import Teams from "./Teams";
 
@@ -15,10 +16,16 @@ class TeamsContainer extends Component {
   render() {
     const loading = this.props.isLoading;
     const mlb_teams = this.props.teams;
-    console.log(mlb_teams.teams);
+   // const selectedTeamId = this.props.selectedTeamId;
+   // console.log(this.props);
 
     return loading === false ? (
-      <Teams mlb_teams={mlb_teams} isLoading={loading} />
+      <Teams
+       // getSelectedTeam = {getSelectedTeam}
+        mlb_teams={mlb_teams}
+        isLoading={loading}
+       // selectedTeamId={selectedTeamId}
+      />
     ) : (
       <p>LOADING </p>
     );
@@ -27,26 +34,11 @@ class TeamsContainer extends Component {
 
 const mapStateToProps = state => ({
   isLoading: state.teams.isLoading,
-  teams: state.teams.teamsData
-  //selected : state.selected.selectedStack
+  teams: state.teams.teamsData,
+  //selectedTeamId: state.selectedTeamId.selectedTeamId
 });
 
 export default connect(mapStateToProps)(TeamsContainer);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //export default TeamsContainer;
 
