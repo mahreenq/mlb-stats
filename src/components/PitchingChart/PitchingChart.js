@@ -65,3 +65,7 @@ function createData(name, calories, fat, carbs, protein) {
 
 export default PitchingChart;
 
+// games pitched, games started, wins, losses, win/loss percentage
+// complete games, shutouts, quality starts, saves, holds, innings pitched
+// hits, runs, earned runs, home runs allowed, base on balls (walks), strikeouts, 
+// ERA
