@@ -19,7 +19,7 @@ class TeamList extends Component {
 
     return (
       <div>
-        <Typography className="heading" variant="h4" gutterBottom>
+        <Typography className="heading" variant="h5" gutterBottom>
           Teams
         </Typography>
         <Masonry className="masonry">

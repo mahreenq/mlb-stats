@@ -15,7 +15,7 @@ class PlayerContainer extends Component {
     this.setState({ isLoading: true });
     axios
       .get(
-        `https://statsapi.mlb.com//api/v1/people/${playerId}?hydrate=stats(group=[hitting,pitching,fielding],type=[yearByYear])`
+        `https://statsapi.mlb.com//api/v1/people/${playerId}?hydrate=stats(group=[hitting,pitching,fielding],type=[season])`
       )
 
       .then(res => {

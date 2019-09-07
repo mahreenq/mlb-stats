@@ -1,15 +1,15 @@
-.singleTeam {
-  width: 100%;
+.singlePlayer {
+  width: 50%;
   margin: auto;
   text-decoration: none;
 }
 
-.teamLogo {
+.playerHeadshot {
   margin-right: auto;
   margin-left: auto;
   display: block;
   padding: 10px;
-  height: 100px;
+  height: 150px;
 }
 
 .teamName {
@@ -17,13 +17,13 @@
 }
 
 @media only screen /*Mobile Larger */ and (min-width: 640px) and (max-width: 1000px) {
-  .singleTeam {
-    width: 50%;
+  .singlePlayer {
+    width: 25%;
   }
 }
 
 @media only screen /*Desktop */ and (min-width: 1000px) {
-  .singleTeam {
+  .singlePlayer {
     width: 20%;
   }
 }
