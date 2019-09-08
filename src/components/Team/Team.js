@@ -1,18 +1,17 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import * as selectedTeam from "../../redux/modules/selected-team";
 import "./styles.css";
-
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import TeamLogo from "../TeamLogo/TeamLogo";
+//BELOW TO USE WITH REDUX
+// import { connect } from "react-redux";
+// import * as selectedTeam from "../../redux/modules/selected-team";
 
 class Team extends Component {
   render() {
-    //console.log(this.props);
     const team = this.props.team;
 
     return (
@@ -25,24 +24,14 @@ class Team extends Component {
           }
         }}
       >
-        {/* <div  onClick={() => this.props.getSelectedTeam(team.id)}> */}
-        {/* <img
-            alt="Team Logo"
-            height="30"
-            src={`https://www.mlbstatic.com/team-logos/${team.id}.svg`}
-          /> */}
-
         <Card
           style={{ margin: 8 }}
-          onClick={() => this.props.getSelectedTeam(team.id)}
+          //BELOW TO USE WITH REDUX
+          // onClick={() => this.props.getSelectedTeam(team.id)}
         >
           <CardActionArea>
-            <TeamLogo teamId={team.id} className="teamLogo"/>
-            {/* <img
-              className="teamLogo"
-              alt="Team Logo"
-              src={`https://www.mlbstatic.com/team-logos/${team.id}.svg`}
-            /> */}
+            <TeamLogo teamId={team.id} className="teamLogo" />
+
             <CardContent>
               <Typography
                 className="teamName"
@@ -63,17 +52,17 @@ class Team extends Component {
             </CardContent>
           </CardActionArea>
         </Card>
-        {/* </div> */}
       </Link>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return { selectedTeamId: state.selectedTeamId };
-};
-export default connect(
-  mapStateToProps,
-  selectedTeam
-)(Team);
+export default Team;
 
+// const mapStateToProps = state => {
+//   return { selectedTeamId: state.selectedTeamId };
+// };
+// export default connect(
+//   mapStateToProps,
+//   selectedTeam
+// )(Team);
