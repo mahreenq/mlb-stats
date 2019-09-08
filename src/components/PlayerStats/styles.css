@@ -1,5 +1,4 @@
-.playerHeadshotStats {
-  height: 300px;
+.playerHeadshotImg {
   margin: auto;
   border: 3px solid #00297a;
   border-radius: 10px;
@@ -40,6 +39,10 @@
   display: none;
 }
 
+.headShotContainer {
+  display: flex;
+}
+
 /* .noStats{
   text-align: center;
   color: rgba(0, 0, 0, 0.611);
@@ -53,6 +56,7 @@
   .playerPicData {
     flex-direction: row;
     margin-bottom: 50px;
+    justify-content: center;
   }
   .playerBio {
     width: 33%;
@@ -60,7 +64,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
   .playerInfo {
     margin-left: 20px !important;
@@ -68,10 +72,15 @@
   .teamLogoContainer {
     display: flex;
     align-items: center;
-    width: 33%;
+    width: 27%;
+    justify-content: center;
   }
   .teamLogoContainer img {
     height: 180px;
+  }
+  .headShotContainer {
+    display: flex;
+    width: 33%;
   }
 }
 
@@ -84,6 +93,7 @@
   .playerPicData {
     flex-direction: row;
     margin-bottom: 50px;
+    justify-content: center;
   }
 
   .playerBio {
@@ -100,8 +110,13 @@
     display: flex;
     align-items: center;
     width: 33%;
+    justify-content: center;
   }
   .teamLogoContainer img {
     height: 180px;
+  }
+  .headShotContainer {
+    display: flex;
+    width: 33%;
   }
 }

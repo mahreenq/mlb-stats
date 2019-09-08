@@ -8,6 +8,7 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import TeamLogo from "../TeamLogo/TeamLogo";
 
 class Team extends Component {
   render() {
@@ -36,11 +37,12 @@ class Team extends Component {
           onClick={() => this.props.getSelectedTeam(team.id)}
         >
           <CardActionArea>
-            <img
+            <TeamLogo teamId={team.id} className="teamLogo"/>
+            {/* <img
               className="teamLogo"
               alt="Team Logo"
               src={`https://www.mlbstatic.com/team-logos/${team.id}.svg`}
-            />
+            /> */}
             <CardContent>
               <Typography
                 className="teamName"

@@ -3,10 +3,11 @@ import "./styles.css";
 
 class TeamLogo extends Component {
   render() {
-    const teamId = this.props.teamId;
+    //const teamId = this.props.teamId;
+    const {teamId, className} = this.props;
     return (
       <img
-        className="teamLogo"
+        className={className}
         alt="Team Logo"
         src={`https://www.mlbstatic.com/team-logos/${teamId}.svg`}
       />

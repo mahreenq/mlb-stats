@@ -24,13 +24,15 @@ class PlayerStats extends Component {
           </Typography>
 
           <div className="playerPicData">
-            <img
-              className="playerHeadshotStats"
-              alt="Player Headshot"
-              src={`https://securea.mlb.com/mlb/images/players/head_shot/${
-                player.id
-              }.jpg`}
-            />
+            <div className="headShotContainer">
+              <img
+                className="playerHeadshotImg"
+                alt="Player Headshot"
+                src={`https://securea.mlb.com/mlb/images/players/head_shot/${
+                  player.id
+                }.jpg`}
+              />
+            </div>
 
             <div className="playerBio">
               <Typography className="playerInfo" gutterBottom variant="body1">
@@ -43,7 +45,7 @@ class PlayerStats extends Component {
                 Weight : {player.weight} lbs
               </Typography>
               <Typography className="playerInfo" gutterBottom variant="body1">
-                Bats/Throws : {player.batSide.description} /{" "}
+                Bats/Throws : {player.batSide.description} /
                 {player.pitchHand.description}
               </Typography>
 
@@ -62,7 +64,7 @@ class PlayerStats extends Component {
               )}
             </div>
             <div className="teamLogoContainer">
-              <TeamLogo teamId={teamId} />
+              <TeamLogo teamId={teamId} className="la" />
             </div>
           </div>
 
