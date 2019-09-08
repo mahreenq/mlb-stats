@@ -61,11 +61,7 @@ class PlayerStats extends Component {
                 <Typography className="playerInfo" gutterBottom variant="body1">
                   Drafted : {player.draftYear}
                 </Typography>
-              ) : (
-                <Typography className="playerInfo" gutterBottom variant="body1">
-                  Drafted : Undrafted
-                </Typography>
-              )}
+              ) : null}
             </div>
 
             {teamId ? (
