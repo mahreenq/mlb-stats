@@ -43,7 +43,7 @@
   display: flex;
 }
 
-@media only screen /*Mobile Larger */ and (min-width: 640px) and (max-width: 996px) {
+@media only screen /*Mobile Larger */ and (min-width: 740px) and (max-width: 996px) {
   .playerContainer {
     width: 80%;
     margin: auto;

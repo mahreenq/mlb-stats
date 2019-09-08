@@ -66,6 +66,11 @@ class PlayerStats extends Component {
                   Drafted : Undrafted
                 </Typography>
               )}
+              {player.mlbDebutDate ? (
+                <Typography className="playerInfo" gutterBottom variant="body1">
+                  MLB Debut Date : {player.mlbDebutDate}
+                </Typography>
+              ) : null}
             </div>
 
             {teamId ? (
