@@ -3,21 +3,19 @@
 React App - Web application displaying MLB teams, rosters and player statistics.
 
 <h3>ASK:</h3> 
-<p>Build a web application which displays MLB team rosters and player statistics. Application should include:
+Build a web application which displays MLB team rosters and player statistics. Application should include:
 <ul> 
 <li>A page/view listing all MLB teams</li>
 <li>A page/view for each team showing the players on their roster </li>
 <li>A page/view for each player displaying some biographical information (name, age, height, weight, etc.) and tables of the player’s seasonal batting and/or pitching statistics</li>
 </ul>
-</p>
 
 <h3>FINISHED PRODUCT:</h3> 
-<p> The web application was built using [Create React App](https://github.com/facebook/create-react-app). Data is grabbed from the [MLB StatsAPI](https://statsapi.mlb.com) using axios. Some React components are displayed using [Material-UI](https://material-ui.com/). Media Queries are added to make pages responsive for mobile, tablet and desktop views.</p>
+The web application was built using [Create React App](https://github.com/facebook/create-react-app). Data is grabbed from the [MLB StatsAPI](https://statsapi.mlb.com) using axios. Some React components are displayed using [Material-UI](https://material-ui.com/). Media Queries are added to make pages responsive for mobile, tablet and desktop views.
 
 <img alt="Home page on Desktop View" src="./screenshots/home.png" width="70%">
 <img alt="Roster page on Desktop View" src="./screenshots/roster.png" width="70%">
 <img alt="Player Stats page on Desktop View" src="./screenshots/player.png" width="70%">
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
