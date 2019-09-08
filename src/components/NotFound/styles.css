@@ -1,0 +1,17 @@
+.notFound {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.notFoundText {
+  width: 50%;
+  font-size: 1.5em;
+  color: #b8b7b8;
+  background-color: #0d0c54a6;
+  border-radius: 60px;
+}
