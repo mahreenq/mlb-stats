@@ -1,5 +1,4 @@
 # MLB-Stats
-
 React App - Web application displaying MLB teams, rosters and player statistics.
 
 ## ASK
@@ -12,6 +11,18 @@ Build a web application which displays MLB team rosters and player statistics. A
 ## FINISHED PRODUCT
 The web application was built using [Create React App](https://github.com/facebook/create-react-app). Data is grabbed from the [MLB StatsAPI](https://statsapi.mlb.com) using axios. Some React components are displayed using [Material-UI](https://material-ui.com/). Media Queries are added to make pages responsive for mobile, tablet and desktop views.
 
+
+## TO VIEW
+Project is hosted on Netlify at [https://stupefied-elion-b93638.netlify.com/](https://stupefied-elion-b93638.netlify.com/)
+
+**Alternatively** you can download this repository. 
+
+* `cd` into the project directory 
+* run `npm install` to download dependencies in the node_modules folder
+* run `npm start` to run the app.
+* Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## SCREENSHOTS
 <img alt="Home page on Desktop View" src="./screenshots/home.png" width="70%">
 <img alt="Roster page on Desktop View" src="./screenshots/roster.png" width="70%">
 <img alt="Player Stats page on Desktop View" src="./screenshots/player.png" width="70%">
