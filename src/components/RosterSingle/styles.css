@@ -5,11 +5,11 @@
 }
 
 .playerHeadshot {
-  margin-right: auto;
-  margin-left: auto;
+  margin: 10px auto 10px auto;
   display: block;
-  padding: 10px;
   height: 150px;
+  border-radius: 10px;
+  border: 3px solid #00297a;
 }
 
 .teamName {

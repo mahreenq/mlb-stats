@@ -9,12 +9,12 @@ import FieldingChart from "../FieldingChart/FieldingChart";
 
 class PlayerStats extends Component {
   render() {
-   //console.log(this.props);
+    console.log(this.props);
     const player = this.props.playerStats[0];
 
     return (
       <div>
-        <Card style={{ margin: 35 }}>
+        <Card className="playerContainer">
           <Typography className="playerName" gutterBottom variant="h5">
             {player.fullName}
           </Typography>
@@ -22,7 +22,7 @@ class PlayerStats extends Component {
             {player.primaryPosition.name}
           </Typography>
 
-          <div className="playerCard">
+          <div className="playerPicData">
             <img
               className="playerHeadshotStats"
               alt="Player Headshot"
@@ -31,17 +31,39 @@ class PlayerStats extends Component {
               }.jpg`}
             />
 
-            <Typography className="playerInfo" gutterBottom variant="body1">
-              Age : {player.currentAge}
-            </Typography>
+            <div className="playerBio">
+              <Typography className="playerInfo" gutterBottom variant="body1">
+                Age : {player.currentAge}
+              </Typography>
+              <Typography className="playerInfo" gutterBottom variant="body1">
+                Height : {player.height}
+              </Typography>
+              <Typography className="playerInfo" gutterBottom variant="body1">
+                Weight : {player.weight} lbs
+              </Typography>
+              <Typography className="playerInfo" gutterBottom variant="body1">
+                Bats/Throws : {player.batSide.description} /{" "}
+                {player.pitchHand.description}
+              </Typography>
 
-            <Typography className="playerInfo" gutterBottom variant="body1">
-              Height : {player.height}
-            </Typography>
+              <Typography className="playerInfo" gutterBottom variant="body1">
+                From : {player.birthCity}, {player.birthCountry}
+              </Typography>
 
-            <Typography className="playerInfo" gutterBottom variant="body1">
-              Weight : {player.weight} lbs
-            </Typography>
+              {player.draftYear ? (
+                <Typography className="playerInfo" gutterBottom variant="body1">
+                  Drafted : {player.draftYear}
+                </Typography>
+              ) : (
+                <Typography className="playerInfo" gutterBottom variant="body1">
+                  Drafted : Undrafted
+                </Typography>
+              )}
+
+              {/* <Typography className="playerInfo" gutterBottom variant="body1">
+                Drafted : {player.draftYear}
+              </Typography> */}
+            </div>
           </div>
 
           <div>
