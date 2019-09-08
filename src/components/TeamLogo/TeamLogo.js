@@ -3,7 +3,6 @@ import "./styles.css";
 
 class TeamLogo extends Component {
   render() {
-    //const teamId = this.props.teamId;
     const {teamId, className} = this.props;
     return (
       <img

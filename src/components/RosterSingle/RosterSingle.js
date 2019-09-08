@@ -5,6 +5,7 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import PlayerHeadshot from "../PlayerHeadshot/PlayerHeadshot";
 
 import "./styles.css";
 
@@ -24,19 +25,14 @@ class RosterSingle extends Component {
             playerName: player.fullName,
             playerId: player.id,
             teamName: teamName,
-            teamId : teamId
+            teamId: teamId
           }
         }}
       >
         <Card style={{ margin: 8 }}>
           <CardActionArea>
-            <img
-              className="playerHeadshot"
-              alt="Player Headshot"
-              src={`https://securea.mlb.com/mlb/images/players/head_shot/${
-                player.id
-              }.jpg`}
-            />
+            <PlayerHeadshot playerId={player.id} className="playerHeadshot" />
+
             <CardContent>
               <Typography
                 className="teamName"

@@ -7,6 +7,7 @@ import BattingChart from "../BattingChart/BattingChart";
 import PitchingChart from "../PitchingChart/PitchingChart";
 import FieldingChart from "../FieldingChart/FieldingChart";
 import TeamLogo from "../TeamLogo/TeamLogo";
+import PlayerHeadshot from "../PlayerHeadshot/PlayerHeadshot";
 
 class PlayerStats extends Component {
   render() {
@@ -25,12 +26,9 @@ class PlayerStats extends Component {
 
           <div className="playerPicData">
             <div className="headShotContainer">
-              <img
+              <PlayerHeadshot
+                playerId={player.id}
                 className="playerHeadshotImg"
-                alt="Player Headshot"
-                src={`https://securea.mlb.com/mlb/images/players/head_shot/${
-                  player.id
-                }.jpg`}
               />
             </div>
 
