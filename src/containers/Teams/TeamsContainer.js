@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-//import Loading from "../../components/Loading";
+import Loading from "../../components/Loading/Loading";
 //import axios from "axios";
-
 import { connect } from "react-redux";
 import { fetchTeams } from "../../redux/modules/mlb-teams";
-//import {getSelectedTeam} from "../../redux/modules/selected-team";
 
 import Teams from "./Teams";
 
@@ -16,16 +14,11 @@ class TeamsContainer extends Component {
   render() {
     const isLoading = this.props.isLoading;
     const mlb_teams = this.props.teams.teams;
-//   const { isLoading, mlb_teams } = this.props;
-
 
     return isLoading === false ? (
-      <Teams
-        mlb_teams={mlb_teams}
-        isLoading={isLoading}
-      />
+      <Teams mlb_teams={mlb_teams} isLoading={isLoading} />
     ) : (
-      <p>LOADING </p>
+      <Loading />
     );
   }
 }

@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-//import Loading from "../../components/Loading";
+import Loading from "../../components/Loading/Loading";
 import axios from "axios";
-
-
-
 import Roster from "./Roster";
 
 class RosterContainer extends Component {
@@ -31,11 +28,17 @@ class RosterContainer extends Component {
     const teamId = this.props.match.params.teamId;
     const teamName = this.props.location.state.teamName;
     const { isLoading, roster } = this.state;
-    
 
-    //console.log(this.props, teamId);
-
-    return isLoading === false ? <Roster roster={roster} teamId={teamId} teamName={teamName} isLoading={isLoading}/> : <p>LOADING </p>;
+    return isLoading === false ? (
+      <Roster
+        roster={roster}
+        teamId={teamId}
+        teamName={teamName}
+        isLoading={isLoading}
+      />
+    ) : (
+      <Loading />
+    );
   }
 }
 

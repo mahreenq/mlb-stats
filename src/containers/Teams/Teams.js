@@ -1,18 +1,17 @@
 import React from "react";
-
-//import Loading from "../../components/Loading";
-// import styles from './styles.css';
+import Loading from "../../components/Loading/Loading";
 import TeamList from "../../components/TeamList/TeamList";
 
-const Teams = ({ mlb_teams, isLoading, selectedTeamId}) => {
-    
-
+const Teams = ({ mlb_teams, isLoading, selectedTeamId }) => {
   return mlb_teams ? (
-    <TeamList mlb_teams={mlb_teams} isLoading={isLoading} selectedTeamId={selectedTeamId}  />
+    <TeamList
+      mlb_teams={mlb_teams}
+      isLoading={isLoading}
+      selectedTeamId={selectedTeamId}
+    />
   ) : (
-    <p> LOADING</p>
+    <Loading />
   );
 };
 
 export default Teams;
-

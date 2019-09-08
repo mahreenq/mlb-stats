@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import Loading from "../../components/Loading";
+import Loading from "../../components/Loading/Loading.js";
 import axios from "axios";
 
 import Player from "./Player";
@@ -36,7 +36,7 @@ class PlayerContainer extends Component {
     return isLoading === false ? (
       <Player playerStats={playerStats} isLoading={isLoading} />
     ) : (
-      <p>LOADING </p>
+      <Loading />
     );
   }
 }
