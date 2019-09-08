@@ -9,8 +9,8 @@ import FieldingChart from "../FieldingChart/FieldingChart";
 
 class PlayerStats extends Component {
   render() {
-    console.log(this.props);
     const player = this.props.playerStats[0];
+    const teamName = this.props.teamName;
 
     return (
       <div>
@@ -19,7 +19,7 @@ class PlayerStats extends Component {
             {player.fullName}
           </Typography>
           <Typography className="playerPosition" gutterBottom variant="body1">
-            {player.primaryPosition.name}
+            {player.primaryPosition.name} for {teamName}
           </Typography>
 
           <div className="playerPicData">
@@ -59,10 +59,6 @@ class PlayerStats extends Component {
                   Drafted : Undrafted
                 </Typography>
               )}
-
-              {/* <Typography className="playerInfo" gutterBottom variant="body1">
-                Drafted : {player.draftYear}
-              </Typography> */}
             </div>
           </div>
 

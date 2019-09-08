@@ -24,6 +24,7 @@ class RosterList extends Component {
           {roster.map(player => {
             return (
               <RosterSingle
+                teamName ={teamName}
                 player={player}
                 teamId={teamId}
                 key={player.person.id}

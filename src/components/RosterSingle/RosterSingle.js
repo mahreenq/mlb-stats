@@ -13,6 +13,7 @@ class RosterSingle extends Component {
     //console.log(this.props);
     const player = this.props.player.person;
     const teamId = this.props.teamId;
+    const teamName = this.props.teamName;
     const position = this.props.player.position.name;
     return (
       <Link
@@ -21,7 +22,8 @@ class RosterSingle extends Component {
           pathname: `/${teamId}/${player.id}`,
           state: {
             playerName: player.fullName,
-            playerId: player.id
+            playerId: player.id,
+            teamName: teamName
           }
         }}
       >
