@@ -6,7 +6,6 @@ import Typography from "@material-ui/core/Typography";
 
 class TeamList extends Component {
   render() {
-    //console.log(this.props);
     const { mlb_teams, selectedTeamId } = this.props;
 
     mlb_teams.sort((a, b) =>

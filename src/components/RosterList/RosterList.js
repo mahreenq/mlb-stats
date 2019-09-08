@@ -6,7 +6,6 @@ import "./styles.css";
 
 class RosterList extends Component {
   render() {
-    // console.log(this.props);
     const { roster, teamName, teamId } = this.props;
 
     return (
@@ -24,7 +23,7 @@ class RosterList extends Component {
           {roster.map(player => {
             return (
               <RosterSingle
-                teamName ={teamName}
+                teamName={teamName}
                 player={player}
                 teamId={teamId}
                 key={player.person.id}

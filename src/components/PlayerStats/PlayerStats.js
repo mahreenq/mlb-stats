@@ -20,9 +20,15 @@ class PlayerStats extends Component {
           <Typography className="playerName" gutterBottom variant="h5">
             {player.fullName}
           </Typography>
-          <Typography className="playerPosition" gutterBottom variant="body1">
-            {player.primaryPosition.name} for {teamName}
-          </Typography>
+          {teamName ? (
+            <Typography className="playerPosition" gutterBottom variant="body1">
+              {player.primaryPosition.name} for {teamName}
+            </Typography>
+          ) : (
+            <Typography className="playerPosition" gutterBottom variant="body1">
+              {player.primaryPosition.name}
+            </Typography>
+          )}
 
           <div className="playerPicData">
             <div className="headShotContainer">
@@ -61,9 +67,12 @@ class PlayerStats extends Component {
                 </Typography>
               )}
             </div>
-            <div className="teamLogoContainer">
-              <TeamLogo teamId={teamId} className="la" />
-            </div>
+
+            {teamId ? (
+              <div className="teamLogoContainer">
+                <TeamLogo teamId={teamId} />
+              </div>
+            ) : null}
           </div>
 
           <div>

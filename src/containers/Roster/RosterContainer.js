@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import Loading from "../../components/Loading/Loading";
 import axios from "axios";
 import Roster from "./Roster";
+import NotFound from "../../components/NotFound/NotFound";
 
 class RosterContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = { roster: [], isLoading: false };
+    this.state = { roster: [], isLoading: false, error: false };
   }
 
   componentDidMount() {
@@ -17,19 +18,26 @@ class RosterContainer extends Component {
 
       .then(res => {
         const roster = res.data.roster;
-        this.setState({ roster: roster, isLoading: false });
+        this.setState({ roster: roster, isLoading: false, error: false });
       })
       .catch(error => {
         console.log(error);
+        this.setState({ error: true });
       });
   }
 
   render() {
     const teamId = this.props.match.params.teamId;
-    const teamName = this.props.location.state.teamName;
-    const { isLoading, roster } = this.state;
+    const teamName = this.props.location.state
+      ? this.props.location.state.teamName
+      : undefined;
+    // const teamName = this.props.location.state.teamName;
 
-    return isLoading === false ? (
+    const { isLoading, roster, error } = this.state;
+
+    return error ? (
+      <NotFound />
+    ) : isLoading === false ? (
       <Roster
         roster={roster}
         teamId={teamId}
@@ -39,6 +47,17 @@ class RosterContainer extends Component {
     ) : (
       <Loading />
     );
+
+    // return isLoading === false ? (
+    // <Roster
+    //   roster={roster}
+    //   teamId={teamId}
+    //   teamName={teamName}
+    //   isLoading={isLoading}
+    // />
+    // ) : (
+    //   <Loading />
+    // );
   }
 }
 
