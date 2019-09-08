@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
@@ -11,7 +10,6 @@ import "./styles.css";
 
 class RosterSingle extends Component {
   render() {
-    //console.log(this.props);
     const player = this.props.player.person;
     const teamId = this.props.teamId;
     const teamName = this.props.teamName;

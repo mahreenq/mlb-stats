@@ -31,7 +31,6 @@ class RosterContainer extends Component {
     const teamName = this.props.location.state
       ? this.props.location.state.teamName
       : undefined;
-    // const teamName = this.props.location.state.teamName;
 
     const { isLoading, roster, error } = this.state;
 
@@ -47,17 +46,6 @@ class RosterContainer extends Component {
     ) : (
       <Loading />
     );
-
-    // return isLoading === false ? (
-    // <Roster
-    //   roster={roster}
-    //   teamId={teamId}
-    //   teamName={teamName}
-    //   isLoading={isLoading}
-    // />
-    // ) : (
-    //   <Loading />
-    // );
   }
 }
 

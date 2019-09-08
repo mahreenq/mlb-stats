@@ -9,8 +9,6 @@ import Paper from "@material-ui/core/Paper";
 
 class BattingChart extends Component {
   render() {
-    //console.log("batting stats", this.props.stats.splits[0].stat);
-
     const stats = this.props.stats.splits[0].stat;
     const season = this.props.stats.splits[0].season;
 

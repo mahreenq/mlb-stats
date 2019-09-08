@@ -3,15 +3,13 @@ import "./styles.css";
 
 class PlayerHeadshot extends Component {
   render() {
-    const {playerId, className} = this.props;
+    const { playerId, className } = this.props;
     return (
       <img
-      className={className}
-      alt="Player Headshot"
-      src={`https://securea.mlb.com/mlb/images/players/head_shot/${
-        playerId
-      }.jpg`}
-    />
+        className={className}
+        alt="Player Headshot"
+        src={`https://securea.mlb.com/mlb/images/players/head_shot/${playerId}.jpg`}
+      />
     );
   }
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import RosterSingle from "../RosterSingle/RosterSingle";
 import Masonry from "react-masonry-component";
 import Typography from "@material-ui/core/Typography";
+import TeamLogo from "../TeamLogo/TeamLogo";
 import "./styles.css";
 
 class RosterList extends Component {
@@ -13,11 +14,8 @@ class RosterList extends Component {
         <Typography className="heading" variant="h5" gutterBottom>
           {teamName} Roster
         </Typography>
-        <img
-          className="teamLogo"
-          alt="Team Logo"
-          src={`https://www.mlbstatic.com/team-logos/${teamId}.svg`}
-        />
+
+        <TeamLogo className="teamLogo" teamId={teamId} />
 
         <Masonry className="rosterMasonry">
           {roster.map(player => {

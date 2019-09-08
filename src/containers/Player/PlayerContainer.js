@@ -42,11 +42,7 @@ class PlayerContainer extends Component {
       ? this.props.location.state.teamId
       : undefined;
 
-      console.log(this.props);
-      // console.log(this.state);
-      console.log(this.props.match.params, error);
-
-    return error && playerStats.length === 0  ? (
+    return error && playerStats.length === 0 ? (
       <NotFound />
     ) : isLoading === false ? (
       <Player

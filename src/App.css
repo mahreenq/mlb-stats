@@ -9,12 +9,6 @@ body {
   min-height: -webkit-fill-available;
 }
 
-/* #root {
-  background: -webkit-gradient(linear, 0 100%, 0 0, from(#546b90), to(#00297a))
-    no-repeat;
-    height: 100vh;
-} */
-
 a {
   text-decoration: none;
 }

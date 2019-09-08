@@ -11,7 +11,8 @@ class NotFound extends Component {
     return (
       <div className="notFound">
         <div className="notFoundText">
-          <h1> Oops, you've reached a page that does not exist </h1>
+          <h1> That ball is out of the park! </h1>
+          <h2> You've reached a page that does not exist </h2>
           <h3>
             Go back <Link to="/"> home </Link>
           </h3>
