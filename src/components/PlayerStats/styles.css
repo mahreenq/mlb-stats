@@ -31,9 +31,13 @@
   margin-bottom: 15px !important;
 }
 
-.playerInfo, .noStats {
+.playerInfo,
+.noStats {
   text-align: center;
   color: rgba(0, 0, 0, 0.611);
+}
+.teamLogoContainer {
+  display: none;
 }
 
 /* .noStats{
@@ -51,15 +55,23 @@
     margin-bottom: 50px;
   }
   .playerBio {
-    width: 50%;
+    width: 33%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     margin-left: 20px;
   }
   .playerInfo {
     margin-left: 20px !important;
+  }
+  .teamLogoContainer {
+    display: flex;
+    align-items: center;
+    width: 33%;
+  }
+  .teamLogoContainer img {
+    height: 180px;
   }
 }
 
@@ -75,13 +87,21 @@
   }
 
   .playerBio {
-    width: 50%;
+    width: 33%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
   .playerInfo {
     margin-left: 20px !important;
+  }
+  .teamLogoContainer {
+    display: flex;
+    align-items: center;
+    width: 33%;
+  }
+  .teamLogoContainer img {
+    height: 180px;
   }
 }

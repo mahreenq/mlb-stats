@@ -6,12 +6,13 @@ import "./styles.css";
 import BattingChart from "../BattingChart/BattingChart";
 import PitchingChart from "../PitchingChart/PitchingChart";
 import FieldingChart from "../FieldingChart/FieldingChart";
+import TeamLogo from "../TeamLogo/TeamLogo";
 
 class PlayerStats extends Component {
   render() {
     const player = this.props.playerStats[0];
-    const teamName = this.props.teamName;
-    console.log(this.props.playerStats[0].stats[0].splits[0].team.name);
+    const { teamName, teamId } = this.props;
+
     return (
       <div>
         <Card className="playerContainer">
@@ -60,6 +61,9 @@ class PlayerStats extends Component {
                 </Typography>
               )}
             </div>
+            <div className="teamLogoContainer">
+              <TeamLogo teamId={teamId} />
+            </div>
           </div>
 
           <div>
@@ -75,7 +79,6 @@ class PlayerStats extends Component {
               })
             ) : (
               <p className="noStats">
-                {" "}
                 Please check back for {player.fullName}'s stats{" "}
               </p>
             )}

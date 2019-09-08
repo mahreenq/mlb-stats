@@ -23,7 +23,8 @@ class RosterSingle extends Component {
           state: {
             playerName: player.fullName,
             playerId: player.id,
-            teamName: teamName
+            teamName: teamName,
+            teamId : teamId
           }
         }}
       >

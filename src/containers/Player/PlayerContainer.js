@@ -29,13 +29,15 @@ class PlayerContainer extends Component {
 
   render() {
     const { isLoading, playerStats } = this.state;
-    const teamName = this.props.location.state.teamName;
-
-    //console.log(this.props.location.state.teamName);
-    // console.log(this.state);
+    const { teamName, teamId } = this.props.location.state;
 
     return isLoading === false ? (
-      <Player playerStats={playerStats} isLoading={isLoading} teamName={teamName} />
+      <Player
+        playerStats={playerStats}
+        isLoading={isLoading}
+        teamName={teamName}
+        teamId={teamId}
+      />
     ) : (
       <Loading />
     );
