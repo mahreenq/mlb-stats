@@ -9,7 +9,7 @@ import FieldingChart from "../FieldingChart/FieldingChart";
 
 class PlayerStats extends Component {
   render() {
-   // console.log(this.props.playerStats);
+   //console.log(this.props);
     const player = this.props.playerStats[0];
 
     return (

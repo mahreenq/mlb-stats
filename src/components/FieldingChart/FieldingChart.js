@@ -9,44 +9,47 @@ import Paper from "@material-ui/core/Paper";
 
 class FieldingChart extends Component {
   render() {
-    console.log("fielding stats", this.props.stats.splits[0].stat);
     const stats = this.props.stats.splits[0].stat;
+
+    const playerData = {
+      Games: `${stats.games}`,
+      "Games Started": `${stats.gamesStarted}`,
+      Innings: `${stats.innings}`,
+      Opportunities: `${stats.chances}`,
+      Putouts: `${stats.putOuts}`,
+      Assists: `${stats.assists}`,
+      Errors: `${stats.errors}`,
+      "Double Plays": `${stats.doublePlays}`,
+      "Fielding Percentage": `${stats.fielding}`
+    };
+
+    const keys = Object.keys(playerData);
 
     return (
       <div className="rootTable">
-        {/* <h1>FIELDING TABLE </h1> */}
         <Paper className="paperTable">
           <Table className="table" size="small">
             <TableHead>
               <TableRow>
-                <TableCell>FIELDING</TableCell>
-
-                <TableCell align="center">Games</TableCell>
-                <TableCell align="center">Games Started</TableCell>
-                <TableCell align="center">Innings</TableCell>
-                <TableCell align="center">Opportunities</TableCell>
-                <TableCell align="center">Putouts</TableCell>
-                <TableCell align="center">Assists</TableCell>
-                <TableCell align="center">Errors</TableCell>
-                <TableCell align="center">Double Plays</TableCell>
-                <TableCell align="center">Fielding Percentage</TableCell>
+                <TableCell className="blue">FIELDING</TableCell>
+                {keys.map(key => (
+                  <TableCell key={key} align="center">
+                    {key}
+                  </TableCell>
+                ))}
               </TableRow>
             </TableHead>
 
             <TableBody>
               <TableRow>
-                <TableCell component="th" scope="row">
-                  2019
-                </TableCell>
-                <TableCell align="center">{stats.games}</TableCell>
-                <TableCell align="center">{stats.gamesStarted}</TableCell>
-                <TableCell align="center">{stats.innings}</TableCell>
-                <TableCell align="center">{stats.chances}</TableCell>
-                <TableCell align="center">{stats.putOuts}</TableCell>
-                <TableCell align="center">{stats.assists}</TableCell>
-                <TableCell align="center">{stats.errors}</TableCell>
-                <TableCell align="center">{stats.doublePlays}</TableCell>
-                <TableCell align="center">{stats.fielding}</TableCell>
+                <TableCell component="th" scope="row" />
+                {Object.keys(playerData).map(function(value) {
+                  return (
+                    <TableCell key={value + "fielding Stat"} align="center">
+                      {playerData[value]}
+                    </TableCell>
+                  );
+                })}
               </TableRow>
             </TableBody>
           </Table>

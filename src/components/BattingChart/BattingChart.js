@@ -9,57 +9,59 @@ import Paper from "@material-ui/core/Paper";
 
 class BattingChart extends Component {
   render() {
-    console.log("batting stats", this.props.stats.splits[0].stat);
+    //console.log("batting stats", this.props.stats.splits[0].stat);
+    //console.log(this.props);
     const stats = this.props.stats.splits[0].stat;
+
+    const playerData = {
+      "Games Played": `${stats.gamesPlayed}`,
+      "Plate Appearances": `${stats.plateAppearances}`,
+      "At Bats": `${stats.atBats}`,
+      Runs: `${stats.runs}`,
+      Hits: `${stats.hits}`,
+      Doubles: `${stats.doubles}`,
+      Triples: `${stats.triples}`,
+      "Home Runs": `${stats.homeRuns}`,
+      "Runs Batted In": `${stats.rbi}`,
+      "Stolen Bases": `${stats.stolenBases}`,
+      "Caught Stealing": `${stats.caughtStealing}`,
+      Walks: `${stats.intentionalWalks}`,
+      "Strike Outs": `${stats.strikeOuts}`,
+      "Batting Avg": `${stats.avg}`,
+      "On Base Percentage": `${stats.obp}`,
+      "Slugging Percentage": `${stats.slg}`
+    };
+
+    const keys = Object.keys(playerData);
+    // const values = Object.keys(playerData).map(function(value) {
+    //   return playerData[value];
+    // });
 
     return (
       <div className="rootTable">
-        {/* <h1>BATTING TABLE </h1> */}
         <Paper className="paperTable">
           <Table className="table" size="small">
             <TableHead>
               <TableRow>
-                <TableCell>BATTING</TableCell>
-                <TableCell align="center">Games Played</TableCell>
-                <TableCell align="center">Plate Appearances</TableCell>
-                <TableCell align="center">At Bats</TableCell>
-                <TableCell align="center">Runs</TableCell>
-                <TableCell align="center">Hits</TableCell>
-                <TableCell align="center">Doubles</TableCell>
-                <TableCell align="center">Triples</TableCell>
-                <TableCell align="center">Home Runs</TableCell>
-                <TableCell align="center">Runs Batted In</TableCell>
-                <TableCell align="center">Stolen Bases</TableCell>
-                <TableCell align="center">Caught Stealing</TableCell>
-                <TableCell align="center">Walks</TableCell>
-                <TableCell align="center">Strike Outs</TableCell>
-                <TableCell align="center">Batting Avg</TableCell>
-                <TableCell align="center">On Base Percentage</TableCell>
-                <TableCell align="center">Slugging Percentage</TableCell>
+                <TableCell className="blue">BATTING</TableCell>
+                {keys.map(key => (
+                  <TableCell key={key} align="center">
+                    {key}
+                  </TableCell>
+                ))}
               </TableRow>
             </TableHead>
 
             <TableBody>
               <TableRow>
-                <TableCell component="th" scope="row">
-                  2019
-                </TableCell>
-                <TableCell align="center">{stats.gamesPlayed}</TableCell>
-                <TableCell align="center">{stats.plateAppearances}</TableCell>
-                <TableCell align="center">{stats.atBats}</TableCell>
-                <TableCell align="center">{stats.runs}</TableCell>
-                <TableCell align="center">{stats.hits}</TableCell>
-                <TableCell align="center">{stats.doubles}</TableCell>
-                <TableCell align="center">{stats.triples}</TableCell>
-                <TableCell align="center">{stats.homeRuns}</TableCell>
-                <TableCell align="center">{stats.rbi}</TableCell>
-                <TableCell align="center">{stats.stolenBases}</TableCell>
-                <TableCell align="center">{stats.caughtStealing}</TableCell>
-                <TableCell align="center">{stats.intentionalWalks}</TableCell>
-                <TableCell align="center">{stats.strikeOuts}</TableCell>
-                <TableCell align="center">{stats.avg}</TableCell>
-                <TableCell align="center">{stats.obp}</TableCell>
-                <TableCell align="center">{stats.slg}</TableCell>
+                <TableCell component="th" scope="row" />
+                {Object.keys(playerData).map(function(value) {
+                  return (
+                    <TableCell key={value + "batting Stat"} align="center">
+                      {playerData[value]}
+                    </TableCell>
+                  );
+                })}
               </TableRow>
             </TableBody>
           </Table>
