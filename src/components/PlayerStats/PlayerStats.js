@@ -74,7 +74,10 @@ class PlayerStats extends Component {
                 ) : null;
               })
             ) : (
-              <p> Stats not available </p>
+              <p className="noStats">
+                {" "}
+                Please check back for {player.fullName}'s stats{" "}
+              </p>
             )}
           </div>
         </Card>
