@@ -10,8 +10,9 @@ import Paper from "@material-ui/core/Paper";
 class BattingChart extends Component {
   render() {
     //console.log("batting stats", this.props.stats.splits[0].stat);
-    //console.log(this.props);
+
     const stats = this.props.stats.splits[0].stat;
+    const season = this.props.stats.splits[0].season;
 
     const playerData = {
       "Games Played": `${stats.gamesPlayed}`,
@@ -54,7 +55,9 @@ class BattingChart extends Component {
 
             <TableBody>
               <TableRow>
-                <TableCell component="th" scope="row" />
+                <TableCell component="th" scope="row" className="blue">
+                  {season}
+                </TableCell>
                 {Object.keys(playerData).map(function(value) {
                   return (
                     <TableCell key={value + "batting Stat"} align="center">

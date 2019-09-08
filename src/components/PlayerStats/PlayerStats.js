@@ -11,7 +11,7 @@ class PlayerStats extends Component {
   render() {
     const player = this.props.playerStats[0];
     const teamName = this.props.teamName;
-
+    console.log(this.props.playerStats[0].stats[0].splits[0].team.name);
     return (
       <div>
         <Card className="playerContainer">
@@ -36,7 +36,7 @@ class PlayerStats extends Component {
                 Age : {player.currentAge}
               </Typography>
               <Typography className="playerInfo" gutterBottom variant="body1">
-                Height : {player.height}
+                Height : {player.height}"
               </Typography>
               <Typography className="playerInfo" gutterBottom variant="body1">
                 Weight : {player.weight} lbs

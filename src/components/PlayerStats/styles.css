@@ -65,7 +65,7 @@
 
 @media only screen /*Desktop */ and (min-width: 1000px) {
   .playerContainer {
-    width: 50%;
+    width: 80%;
     margin: auto;
   }
 

@@ -10,6 +10,7 @@ import Paper from "@material-ui/core/Paper";
 class FieldingChart extends Component {
   render() {
     const stats = this.props.stats.splits[0].stat;
+    const season = this.props.stats.splits[0].season;
 
     const playerData = {
       Games: `${stats.games}`,
@@ -42,7 +43,9 @@ class FieldingChart extends Component {
 
             <TableBody>
               <TableRow>
-                <TableCell component="th" scope="row" />
+                <TableCell component="th" scope="row" className="blue">
+                  {season}
+                </TableCell>
                 {Object.keys(playerData).map(function(value) {
                   return (
                     <TableCell key={value + "fielding Stat"} align="center">

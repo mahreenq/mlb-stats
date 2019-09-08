@@ -14,8 +14,6 @@ class Team extends Component {
     //console.log(this.props);
     const team = this.props.team;
 
-    // const classes = useStyles();
-
     return (
       <Link
         className="singleTeam"
@@ -77,5 +75,3 @@ export default connect(
   selectedTeam
 )(Team);
 
-// 36 & 39
-//<Card className={classes.card}>
