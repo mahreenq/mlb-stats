@@ -1,7 +1,6 @@
 import React from "react";
 import "./styles.css";
 import Typography from "@material-ui/core/Typography";
-import SvgIcon from "@material-ui/core/SvgIcon";
 import { Link } from "react-router-dom";
 
 const Header = ({ path }) => {
@@ -10,15 +9,26 @@ const Header = ({ path }) => {
       <div className="nav">
         {path === "/" ? null : (
           <Link to="/">
-            <SvgIcon>
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-            </SvgIcon>
+            <img
+              src="http://www.mlbstatic.com/team-logos/league-on-dark/1.svg"
+              height="20"
+              alt="Major League Baseball Logo"
+              className="mlbLogoSmall"
+            />
           </Link>
         )}
       </div>
       <Typography variant="h4" gutterBottom>
         Major League Baseball
       </Typography>
+      {path === "/" ? (
+        <img
+          src="http://www.mlbstatic.com/team-logos/league-on-dark/1.svg"
+          height="100"
+          alt="Major League Baseball Logo"
+          className="mlbLogo"
+        />
+      ) : null}
     </div>
   );
 };
